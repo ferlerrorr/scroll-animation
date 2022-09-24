@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #131316;
+    color: #fffeee;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    margin: 0 0 10px 0;
+}
+
+section p{
+    margin: 0 15px 0 35px;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transition: all 1.3s;
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -ms-transition: all 1.3s;
+    -o-transition: all 1.3s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+@media(prefers-reduce-motion){
+    .hidden{
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+}
+}
+
+.logo{
+    display: flex;
+}
+
+.logo-image{
+    width: 140px;
+}
+
+.logo:nth-child(2){
+    transition-delay: 250ms;
+}
+
+.logo:nth-child(3){
+    transition-delay: 380ms;
+}
+
+
+.logo:nth-child(4){
+    transition-delay: 500ms;
+}
